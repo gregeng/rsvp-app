@@ -1,3 +1,9 @@
 <h3>Available Events</h3>
 
+<ol>
+<%= @events.each do |event| %>
+  <li><%= link_to event.name, event_path(event) %><li>
+<% end %>
+</ol>
+
 <%= link_to "Create a new event", new_event_path %>
