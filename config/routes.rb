@@ -1,4 +1,11 @@
-RsvpApp::Application.routes.draw do  resources :events
+RsvpApp::Application.routes.draw do
+  resources :events do
+    resources :invites, :only => [:new]
+  end
+
+  resources :invites
+  resources :users
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
