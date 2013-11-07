@@ -13,7 +13,6 @@ class InvitesController < ApplicationController
     @invite = Invite.find(params[:invite][:invite_id])
     @invite.attending = params[:invite][:attending]
     @invite.save
-
     redirect_to events_path
   end
 
