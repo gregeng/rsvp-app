@@ -1,0 +1,6 @@
+<%= form_for @invite do |f| %>
+<%= f.label "Attending:" %>
+<%= f.text_field :attending %>
+<%= f.hidden_field :invite_id, :value => @invite.id %>
+<%= f.submit %>
+<% end %>
