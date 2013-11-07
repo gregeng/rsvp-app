@@ -2,6 +2,14 @@
 
 
 <!-- We will need to iterate the invites after looking  -->
+<h4>The Invited:</h4>
 
+<ul>
+<% @users.each do |user| %>
+<li><%= user.name %></li>
+<% end %>
+<ul>
+
+<br>
 <%= link_to "Invite User", new_event_invite_path(@event) %><br>
 <%= link_to "All Events", events_path %>
